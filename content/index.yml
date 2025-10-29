@@ -1,4 +1,8 @@
 seo:
+  title: Aditia Dwi - Web Developer
+  description: Welcome to my portfolio! I'm Emma Thompson, a UX/UI designer and front-end developer based in Boston. I specialize in creating user-centered digital experiences that are both beautiful and functional.
+title: Hey, I'm Aditia Dwi Web Developer
+description: I craft intuitive digital experiences where design meets functionality. Based in Boston, bringing ideas to life through code and creativity.
   title: "Aditia Dwi – Web Developer & Creative Builder"
   description: "Hi, I'm Aditia Dwi — a web developer from Indonesia who loves crafting intuitive, minimal, and thoughtful digital experiences. I focus on clean front-end architecture, practical UI, and code that just makes sense."
 
@@ -26,7 +30,7 @@ hero:
 
 
 about:
-  title: "About Me"
+  title: About Me
   description: |
     I'm a web developer based in Indonesia who enjoys turning ideas into working, polished interfaces.
     My background blends frontend development, UX thinking, and a bit of design sense — mostly learned from experimenting, failing, and learning again.
