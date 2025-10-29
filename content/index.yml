@@ -1,8 +1,4 @@
 seo:
-  title: Aditia Dwi - Web Developer
-  description: Welcome to my portfolio! I'm Emma Thompson, a UX/UI designer and front-end developer based in Boston. I specialize in creating user-centered digital experiences that are both beautiful and functional.
-title: Hey, I'm Aditia Dwi Web Developer
-description: I craft intuitive digital experiences where design meets functionality. Based in Boston, bringing ideas to life through code and creativity.
   title: "Aditia Dwi – Web Developer & Creative Builder"
   description: "Hi, I'm Aditia Dwi — a web developer from Indonesia who loves crafting intuitive, minimal, and thoughtful digital experiences. I focus on clean front-end architecture, practical UI, and code that just makes sense."
 
@@ -37,62 +33,30 @@ about:
     I work mainly with Vue and Nuxt, and I like keeping things clean, reusable, and maintainable.
     Outside of coding, I love making zines, photographing everyday things, and growing Astrophytum cacti.
 
+
 experience:
   title: Work Experience
   items:
+    - position: "Software Engineer (Frontend)"
+      date: "2019 - Present"
+      company:
+        name: "Sunwell"
+        url: "https://sunwellsystem.com"
     - position: "Frontend Developer (Freelance)"
-      date: "2022 - Present"
+      date: "2021"
       company:
-        name: "Independent"
-        logo: "i-simple-icons-vuedotjs"
-        url: "https://vuejs.org"
-        color: "#42b883"
-    - position: "POS Application Developer"
-      date: "2024 - Now"
+        name: "Moladin"
+        url: "https://moladin.com"
+    - position: "Web Developer"
+      date: "2020"
       company:
-        name: "Personal Project"
-        logo: "i-simple-icons-nuxtdotjs"
-        url: "https://nuxt.com"
-        color: "#00DC82"
-    - position: "UI Experiment & Zine Creator"
-      date: "2023 - Now"
+        name: "Muslimedu.co"
+        url: "https://Muslimedu.co"
+    - position: "Web Developer"
+      date: "2018 - 2019"
       company:
-        name: "Self-Initiated Projects"
-        logo: "i-simple-icons-notion"
-        url: "https://notion.so"
-        color: "#000000"
-
-# experience:
-#   title: Work Experience
-#   items:
-#     - position: "Software Engineer (Frontend)"
-#       date: "March 2019 - Present"
-#       company:
-#         name: "Sunwell System Technologies"
-#         logo: "lucide:sun"
-#         url: "https://sunwellsystem.com"
-#         color: "#F5C827"
-#     - position: "Frontend Developer (Freelance)"
-#       date: "Sept 2021 - Dec 2021"
-#       company:
-#         name: "Moladin"
-#         logo: "lucide:circle
-#         url: "https://moladin.com"
-#         color: "#090DC8"
-#     - position: "Web Developer"
-#       date: "2020"
-#       company:
-#         name: "Muslimedu.co"
-#         logo: "lucide:circle
-#         url: "https://Muslimedu.co"
-#         color: "#4927F5"
-#     - position: "Web Developer"
-#       date: "2018 - 2019"
-#       company:
-#         name: "Iwearzule"
-#         logo: "lucide:circle
-#         url: "https://iwearzule.com"
-#         color: "#000000"
+        name: "Iwearzule"
+        url: "https://iwearzule.com"
 
 
 testimonials:
