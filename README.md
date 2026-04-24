@@ -7,7 +7,7 @@ Use this template to create your own portfolio with [Nuxt UI](https://ui.nuxt.co
 - [Live demo](https://portfolio-template.nuxt.dev/)
 - [Documentation](https://ui.nuxt.com/getting-started/installation)
 
-<a href="https://portfolio-template.nuxt.dev/" target="_blank">
+<a href="https://portfolio-template.nuxt.dev/" target="_blank" rel="noopener noreferrer">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://ui.nuxt.com/assets/templates/nuxt/portfolio-dark.png">
     <source media="(prefers-color-scheme: light)" srcset="https://ui.nuxt.com/assets/templates/nuxt/portfolio-light.png">
