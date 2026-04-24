@@ -99,10 +99,12 @@ export default defineContentConfig({
       type: 'page',
       source: [
         { include: 'projects.yml' },
-        { include: 'blog.yml' }
+        { include: 'blog.yml' },
+        { include: 'gallery.yml' }
       ],
       schema: z.object({
-        links: z.array(createButtonSchema())
+        links: z.array(createButtonSchema()).optional(),
+        images: z.array(createImageSchema()).optional()
       })
     }),
     speaking: defineCollection({
