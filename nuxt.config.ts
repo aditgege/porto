@@ -21,7 +21,12 @@ export default defineNuxtConfig({
   ogImage: {
     enabled: true,
     runtimeCacheStorage: false,
-    renderer: 'satori'
+    renderer: 'satori',
+    compatibility: {
+      runtime: {
+        resvg: 'wasm'
+      }
+    }
   },
 
   nitro: {
@@ -33,8 +38,7 @@ export default defineNuxtConfig({
     },
     externals: {
       external: [/\.node$/]
-    },
-    inline: ['@resvg/resvg-js', '@resvg/resvg-wasm']
+    }
   },
 
   eslint: {
