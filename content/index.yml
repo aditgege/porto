@@ -1,9 +1,9 @@
 seo:
-  title: "Aditia Dwi – Web Developer & Creative Builder"
-  description: "Hi, I'm Aditia Dwi — a web developer from Indonesia who loves crafting intuitive, minimal, and thoughtful digital experiences. I focus on clean front-end architecture, practical UI, and code that just makes sense."
+  title: "Aditia Dwi Pratomo – Senior Frontend Engineer & UI Architect"
+  description: "Senior Frontend Engineer with 7+ years specializing in Vue.js, Nuxt.js, and large-scale multi-tenant ERP systems. Based in Bandung, Indonesia."
 
-title: "Hey, I'm Aditia Dwi — Web Developer"
-description: "I build web apps that feel simple, look good, and actually work. I enjoy making interfaces that are intuitive, fast, and fun to use — turning small ideas into things people can click and enjoy."
+title: "Hey, I'm Aditia — Senior Frontend Engineer"
+description: "I architect large-scale Vue.js applications, build multi-tenant ERP systems, and migrate legacy codebases without breaking production. 7+ years turning complex business logic into clean, maintainable frontends."
 
 hero:
   links:
@@ -12,102 +12,114 @@ hero:
       color: "neutral"
   images:
     - src: /hero/random-1.avif
-      alt: random setup
+      alt: Development workspace
     - src: /hero/random-2.avif
       alt: Code and coffee
     - src: /hero/random-3.avif
-      alt: Creative process
+      alt: Architecture planning
     - src: /hero/random-4.avif
-      alt: UI sketches
+      alt: UI implementation
     - src: /hero/random-5.avif
       alt: Vue and Nuxt projects
     - src: /hero/random-6.avif
       alt: Daily setup
 
-
 about:
   title: About Me
   description: |
-    I'm a web developer based in Indonesia who enjoys turning ideas into working, polished interfaces.
-    My background blends frontend development, UX thinking, and a bit of design sense — mostly learned from experimenting, failing, and learning again.
-    I work mainly with Vue and Nuxt, and I like keeping things clean, reusable, and maintainable.
-    Outside of coding, I love making zines, photographing everyday things, and growing Astrophytum cacti.
-
+    Frontend engineer based in Bandung, Indonesia with 7+ years of hands-on experience in the Vue.js and Nuxt.js ecosystem.
+    I specialize in architecting multi-tenant ERP systems, building POS applications, and implementing micro-frontend architectures with Single-SPA.
+    My approach is practical — I go direct-to-code for UI prototyping, handle CI/CD pipelines, and manage VPS deployments.
+    I care about writing code that's maintainable, performant, and doesn't make the next developer curse my name.
 
 experience:
   title: Work Experience
   items:
-    - position: "Software Engineer (Frontend)"
+    - position: "Software Engineer"
       date: "2019 - Present"
       company:
-        name: "Sunwell"
+        name: "Sunwell System Technologies"
         url: "https://sunwellsystem.com"
+        logo: "i-simple-icons-vuedotjs"
+        color: "#42b883"
     - position: "Frontend Developer (Freelance)"
       date: "2021"
       company:
         name: "Moladin"
         url: "https://moladin.com"
-    - position: "Web Developer"
+        logo: "i-simple-icons-javascript"
+        color: "#f7df1e"
+    - position: "Frontend Developer"
+      date: "2022 - Present"
+      company:
+        name: "Ngondang.id"
+        url: "https://ngondang.id"
+        logo: "i-simple-icons-nuxtdotjs"
+        color: "#00dc82"
+    - position: "Frontend Developer"
       date: "2020"
       company:
         name: "Muslimedu.co"
-        url: "https://Muslimedu.co"
-    - position: "Web Developer"
+        url: "https://muslimedu.co"
+        logo: "i-simple-icons-nuxtdotjs"
+        color: "#00dc82"
+    - position: "Frontend Developer"
       date: "2018 - 2019"
       company:
         name: "Iwearzule"
         url: "https://iwearzule.com"
-
+        logo: "i-simple-icons-laravel"
+        color: "#ff2d20"
 
 testimonials:
-  - quote: "Aditia has a rare mix of clean coding style and visual taste. He understands how people actually use interfaces — the POS prototype he built was so intuitive that even non-tech users could operate it instantly."
+  - quote: "Aditia led the migration of our entire ERP frontend from Vue 2 to Composition API without a single day of downtime. His understanding of large-scale Vue applications is exceptional — he thinks about architecture, not just features."
     author:
-      name: "Rina"
-      description: "Small Café Owner"
+      name: "Engineering Lead"
+      description: "Sunwell System Technologies"
       avatar:
-        src: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=facearea&facepad=2&w=40&h=40&q=80"
-        srcset: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x"
-  - quote: "His approach to design and code is calm but precise. You can tell he cares about usability — not just making things look good."
+        src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=40&h=40&q=80"
+        alt: "Engineering Lead"
+  - quote: "Working with Aditia on the Single-SPA integration was seamless. He solved complex domain separation challenges between our frontend modules and delivered a unified dashboard that just worked."
     author:
-      name: "Fajar"
-      description: "Collaborator on Corndoriano"
+      name: "Tech Lead"
+      description: "Moladin"
       avatar:
-        src: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&facepad=2&w=40&h=40&q=80"
-        srcset: "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&facepad=2&w=80&h=80&q=80 2x"
+        src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&facepad=2&w=40&h=40&q=80"
+        alt: "Tech Lead"
 
 blog:
-  title: "Notes & Experiments"
-  description: "A mix of web dev thoughts, personal experiments, and reflections about creating things."
+  title: "Writing & Notes"
+  description: "Technical articles on frontend architecture, Vue.js patterns, and lessons from building production systems."
 
 faq:
   title: "Frequently Asked Questions"
-  description: "A few things people usually ask."
+  description: "Common questions about my work and expertise."
   categories:
-    - title: "Work & Skills"
+    - title: "Technical Expertise"
       questions:
-        - label: "What do you specialize in?"
+        - label: "What's your primary tech stack?"
           content: |
-            I focus on front-end development using Vue 3 and Nuxt, often with TypeScript and composables.
-            I enjoy building dashboards, POS systems, and small-scale tools that feel fast and effortless.
-        - label: "Do you do design too?"
+            Vue.js (2 & 3) and Nuxt.js (2 & 3) are my bread and butter. I work with Pinia for state management, Vitest and Playwright for testing, Tailwind CSS and Vuetify for UI, and occasionally Golang for backend services.
+            I also have experience with React.js, Single-SPA for micro-frontends, Laravel, and Strapi CMS.
+        - label: "What kind of projects do you specialize in?"
           content: |
-            Yes — but in a practical way. I like designing interfaces that feel natural to use.
-            I'm not a full-time designer, but I care a lot about layout, typography, and visual rhythm.
-        - label: "Do you take freelance work?"
+            I specialize in large-scale multi-tenant ERP systems, Point of Sale applications, and micro-frontend architectures.
+            Most of my work involves complex business logic — handling multi-tenancy, modular architectures for different industries (retail, automotive, logistics), and migrating legacy systems to modern frameworks.
+        - label: "Do you handle deployment and DevOps?"
           content: |
-            Occasionally, yes. I prefer small to medium projects that need custom UI and logic rather than generic templates.
-            If you have something meaningful and straightforward, I'd be happy to discuss it.
-    - title: "Personal & Projects"
+            Yes. I manage end-to-end frontend development including CI/CD pipelines and deploying multi-app environments on VPS servers.
+            I believe a frontend engineer should understand the full lifecycle — from writing code to getting it running in production.
+    - title: "Working Together"
       questions:
-        - label: "What are you currently working on?"
+        - label: "Are you available for freelance work?"
           content: |
-            I'm building a POS system for cafés with focus on simplicity and minimal input — mostly just tapping.
-            I'm also learning to refine TypeScript workflows with Zod, and occasionally writing zines about odd things like cacti.
-        - label: "What do you do outside of coding?"
+            Selectively, yes. I'm open to projects that involve complex frontend architecture, Vue/Nuxt development, or legacy system migrations.
+            I prefer meaningful projects with real technical challenges over template-based work.
+        - label: "What's your approach to new projects?"
           content: |
-            I enjoy photography, watching anime like *To Your Eternity*, taking care of my Astrophytum asterias, and doing DIY projects.
-            I also love analyzing small, funny, serious things — then turning them into zines.
-        - label: "Where do you see yourself next?"
+            I start by understanding the business requirements and existing codebase. I go direct-to-code for UI prototyping rather than spending weeks in design tools.
+            For architecture, I focus on maintainability and scalability — especially important for multi-tenant systems where one codebase serves many clients.
+        - label: "Where are you based?"
           content: |
-            Ideally, I'd like to combine my creative side with web development — maybe through a digital product business or creative studio.
-            The goal is to keep learning, experimenting, and making things that feel personal and useful.
+            Bandung, Indonesia. I've worked with both local companies and remote teams across Indonesia.
+            I'm comfortable with async communication and have experience collaborating with distributed teams.

@@ -1,27 +1,29 @@
 title: About Me
-description: Learn more about my journey as a Boston-based Web Developer & Front-End Developer, my design philosophy, and my passion for crafting intuitive digital experiences.
+description: Senior Frontend Engineer with 7+ years building large-scale Vue.js applications, multi-tenant ERP systems, and micro-frontend architectures in Bandung, Indonesia.
 content: |
-  Hi, I'm **Aditia Dwi **, a Web Developer and Front-End Developer based right here in Boston. For the past six years, I've been immersed in the world of digital product creation, focusing on building experiences that are not just functional, but genuinely intuitive and engaging for users.
+  Hi, I'm **Aditia Dwi Pratomo**, a Senior Frontend Engineer and UI Architect based in Bandung, Indonesia. For the past 7+ years, I've been deep in the Vue.js and Nuxt.js ecosystem — building everything from multi-tenant ERP systems to Point of Sale applications that handle real business-critical transactions.
 
-  My path started at **Boston University**, where I earned a degree in Interactive Design. It was there I discovered my dual passion for the visual language of design and the logical puzzle of code. Since then, I've honed my skills in both areas, believing that the best digital products are born from a deep understanding of both aesthetics and implementation.
+  My day-to-day at **Sunwell System Technologies** involves architecting modular frontend systems that serve diverse industries — retail, automotive, logistics — each with their own complex business rules and customization needs. I led the development of **SoraPOS**, a modern Point of Sale system built with Nuxt 3 and Pinia, where I implemented comprehensive testing with Vitest and Playwright to ensure 99% reliability in transaction flows.
 
-  ### My Design Philosophy
+  ### What I Do Best
 
-  My design philosophy is rooted in **empathy** and **problem-solving**. I believe great design starts with understanding the 'why' – the user's needs, motivations, and pain points. I use research, iterative prototyping (often with tools like Figma), and user testing to ensure the solutions I build are truly effective.
+  I'm the person you call when you need to **migrate a massive legacy codebase without breaking production**. I spearheaded the migration of an entire ERP system from Vue 2 to Vue 2.7 with Composition API bridge, and upgraded Vuetify 1 to 2 — all while keeping the system running for active users. It's not glamorous work, but it's the kind of engineering that matters.
 
-  I strive to create interfaces that feel effortless, where functionality and beauty work hand-in-hand. Whether I'm crafting pixel-perfect UIs or writing clean Vue.js/Nuxt.js code, my focus is always on creating value for the end-user.
+  I also have hands-on experience with **micro-frontend architecture** using Single-SPA, having integrated multiple frontend domains into a unified dashboard during my time at Moladin. Solving the domain separation challenges between different frontend modules taught me a lot about scalability and clean boundaries.
 
-  ### What Drives Me
+  ### My Approach
 
-  What keeps me excited about this work is the constant learning and the challenge of translating complex ideas into simple, elegant solutions. There's nothing more rewarding than seeing a design come to life and knowing it's making someone's digital interaction easier or more enjoyable.
+  I'm a **direct-to-code** person. Instead of spending weeks in Figma, I prototype directly in the browser — it's faster, more accurate, and lets me iterate with real data and real interactions. I handle the full development lifecycle: from rapid UI prototyping to CI/CD pipelines and VPS server management.
 
-  ### Beyond the Screen
+  My philosophy is simple: write code that the next developer can understand without a 30-minute explanation. Keep components modular, state management predictable, and business logic separated from presentation.
 
-  When I'm not designing or coding, you might find me exploring Boston's latest coffee shops, hiking nearby trails, or occasionally contributing to open-source projects.
+  ### Beyond the Code
 
-  Thanks for stopping by. Feel free to browse my [projects](/projects) or [get in touch](/#contact) if you'd like to collaborate!
+  I graduated from **STMIK AMIK Bandung** with a degree in Information Technology, and I started my career in software engineering at **SMK Negeri 4 Bandung**. When I'm not writing Vue components, I'm probably experimenting with Golang, tinkering with server configurations, or exploring new ways to make web applications faster.
+
+  Feel free to check out my [projects](/projects) or [reach out](mailto:aditgege@gmail.com) if you want to collaborate on something interesting.
 images:
   - src: https://images.unsplash.com/photo-1744877478622-a78c7a3336f6?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    alt: My coffee workspace
+    alt: My workspace
   - src: https://images.unsplash.com/photo-1744429523595-2c06b8611242?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    alt: My trip to Tokyo
+    alt: Bandung city view

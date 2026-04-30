@@ -1,160 +1,249 @@
 ---
-title: "From Mockup to Market: My End-to-End Product Design Process"
-description: A detailed breakdown of my iterative design methodology, from
-  initial research to final handoff, with practical tips for designers at every
-  stage.
-date: 2025-04-23
+title: "Migrating a Massive Vue 2 ERP to Composition API — Without Breaking Production"
+description: How we migrated a 200k+ LOC Vue 2 ERP system to Composition API using the Vue 2.7 bridge, while keeping the app running in production for 50+ tenants.
+date: 2025-04-10
 image: https://images.pexels.com/photos/1050312/pexels-photo-1050312.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
 minRead: 8
 author:
-  name: Aditia Dwi 
+  name: Aditia Dwi Pratomo
   avatar:
     src: https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-    alt: Aditia Dwi 
+    alt: Aditia Dwi Pratomo
 ---
 
-Creating successful digital products isn't about following a rigid formula—it's about developing a flexible framework that adapts to the unique challenges of each project. After refining my approach across dozens of products, I've developed a process that consistently delivers results while leaving room for creativity and iteration.
+Last year, I faced one of the most challenging migrations of my career: taking a massive multi-tenant ERP system built on Vue 2 Options API and migrating it to Composition API, all while keeping production running for 50+ active tenants. No downtime. No breaking changes. Just a gradual, surgical migration that took six months.
 
-In this article, I'll walk through my end-to-end design process, from initial discovery to developer handoff, using my recent work on the EcoTrack application as a case study.
+The codebase was huge. Over 200,000 lines of Vue code, hundreds of components, Vuex modules everywhere, and a complex permission system that touched nearly every view. The business couldn't afford a rewrite, and we couldn't freeze feature development for half a year. We needed a strategy that let us migrate incrementally.
 
-## Phase 1: Discovery & Research
+## Why Migrate at All?
 
-Every great product starts with understanding the problem it's trying to solve. For EcoTrack, our challenge was creating an engaging way for users to track their environmental impact without feeling overwhelmed by guilt or complex data.
+The Options API wasn't broken, but we were hitting real pain points. Our components were getting bloated with mixins stacked on mixins. Logic reuse was a mess. We had a `permissionMixin`, a `formValidationMixin`, a `tablePaginationMixin`, and they all stepped on each other's toes. Debugging was a nightmare because you'd have to trace through five different files to understand what a single component was doing.
 
-### User Interviews
+Composition API promised better code organization and reusability through composables. More importantly, it was the future of Vue, and we needed to position ourselves for an eventual Vue 3 migration down the road.
 
-I began by conducting interviews with 12 potential users across different demographics, focusing on their current habits and attitudes toward sustainability. These conversations revealed a crucial insight: most people wanted to make environmentally friendly choices but felt paralyzed by the complexity of calculating their impact.
+## The Vue 2.7 Bridge
 
-> "I care about the environment, but I have no idea if using a paper bag is actually better than plastic, or if my reusable water bottle makes any difference." — Interview participant
+Vue 2.7 was our lifeline. It backported Composition API support to Vue 2, which meant we could start using `<script setup>` and composables without upgrading to Vue 3. This was critical because Vue 3 would've required us to also upgrade Vuetify (we were on v1.5), rewrite our Vuex store, and deal with breaking changes across the entire ecosystem.
 
-### Competitive Analysis
+The migration plan was simple in theory:
 
-Next, I analyzed existing sustainability apps, creating a feature comparison matrix to identify gaps and opportunities. Most competitors focused on carbon footprint calculations but failed to provide actionable guidance or positive reinforcement.
+1. Upgrade to Vue 2.7
+2. Migrate components one by one to Composition API
+3. Extract shared logic into composables
+4. Keep everything working in production
 
-### Defining Success
+In practice, it was way more complicated.
 
-Before opening Figma, I collaborated with stakeholders to define clear success metrics:
+## Phase 1: The Upgrade
 
-- Increase daily active usage by 40%
-- Improve user-reported understanding of environmental impact
-- Drive measurable behavior changes in at least two sustainability categories
+Upgrading from Vue 2.6 to 2.7 should've been straightforward, but we hit issues immediately. Some of our dependencies weren't compatible with 2.7 yet. We had to fork a couple of internal libraries and patch them ourselves.
 
-## Phase 2: Ideation & Conceptualization
+```bash
+# Our package.json changes
+"vue": "^2.7.14",
+"@vue/composition-api": "^1.7.1", # Still needed for some plugins
+"vue-template-compiler": "^2.7.14"
+```
 
-With a solid understanding of the problem space, I moved into the creative phase of the process.
+The build broke in about 20 places. Most were minor, like render function changes, but a few were subtle. We had some dynamic component registration that relied on Vue 2.6 internals, and that needed a complete rewrite.
 
-### Sketching
+Testing was brutal. We spent two weeks just running through every module in our staging environment, checking that nothing broke. Our E2E test suite (Playwright) caught a bunch of edge cases, but manual testing was unavoidable given the complexity.
 
-I always start with pen and paper, rapidly exploring different approaches without the constraints of digital tools. For EcoTrack, I filled three sketchbooks with concepts ranging from gamified experiences to data-heavy dashboards.
+## Phase 2: Composable Extraction
 
-### Information Architecture
+Once we were stable on 2.7, I started identifying patterns that could become composables. The first target was our permission system. Every component was doing this:
 
-Based on research insights, I developed a user-centered information architecture that prioritized simplicity and actionable information:
+```javascript
+// Old Options API approach
+export default {
+  mixins: [permissionMixin],
+  computed: {
+    canEdit() {
+      return this.hasPermission('inventory.edit')
+    },
+    canDelete() {
+      return this.hasPermission('inventory.delete')
+    }
+  }
+}
+```
 
-1. **Dashboard** — Personalized overview with immediate impact insights
-2. **Daily Tracker** — Simple logging of activities with immediate feedback
-3. **Impact Journey** — Visualization of progress over time
-4. **Action Center** — Customized recommendations based on user behavior
+I extracted it into a composable:
 
-### Design Principles
+```javascript
+// composables/usePermissions.js
+import { computed } from 'vue'
+import { useStore } from 'vuex'
 
-I established four core design principles to guide all decisions:
+export function usePermissions() {
+  const store = useStore()
+  
+  const hasPermission = (permission) => {
+    const userPermissions = store.state.auth.permissions
+    return userPermissions.includes(permission)
+  }
+  
+  const hasAnyPermission = (permissions) => {
+    return permissions.some(p => hasPermission(p))
+  }
+  
+  const hasAllPermissions = (permissions) => {
+    return permissions.every(p => hasPermission(p))
+  }
+  
+  return {
+    hasPermission,
+    hasAnyPermission,
+    hasAllPermissions
+  }
+}
+```
 
-- **Simplify complexity** — Translate environmental impact into understandable units
-- **Celebrate progress** — Focus on positive reinforcement rather than guilt
-- **Enable informed choices** — Provide context for decision-making
-- **Design for habit formation** — Create satisfying interaction loops
+Now components could just do:
 
-## Phase 3: Prototyping & Testing
+```vue
+<script setup>
+import { usePermissions } from '@/composables/usePermissions'
 
-With the conceptual framework in place, I moved into the iterative cycle of prototyping and testing.
+const { hasPermission } = usePermissions()
+const canEdit = computed(() => hasPermission('inventory.edit'))
+</script>
+```
 
-### Low-Fidelity Wireframes
+Way cleaner. We did the same for form validation, table pagination, API calls, and modal management. By the end, we had about 30 composables that covered 80% of our common patterns.
 
-I created wireframes focusing on user flows and information hierarchy, deliberately keeping the visual design minimal to focus feedback on functionality and structure.
+## Phase 3: Component Migration
 
-### User Testing (Round 1)
+Migrating individual components was tedious but methodical. I created a checklist:
 
-Testing wireframes with 8 participants revealed several key insights:
+1. Convert `data()` to `ref()` or `reactive()`
+2. Convert `computed` properties to `computed()`
+3. Convert `methods` to regular functions
+4. Replace lifecycle hooks (`mounted` → `onMounted`)
+5. Extract any mixin logic to composables
+6. Update Vuex usage to `useStore()`
+7. Test thoroughly
 
-- Users wanted more immediate feedback when logging activities
-- The impact visualization wasn't intuitive for most users
-- People were confused by technical environmental terminology
+Here's a before/after of a typical component:
 
-### Mid-Fidelity Prototypes
+```vue
+<!-- Before: Options API -->
+<script>
+export default {
+  data() {
+    return {
+      items: [],
+      loading: false,
+      page: 1,
+      pageSize: 20
+    }
+  },
+  computed: {
+    totalPages() {
+      return Math.ceil(this.items.length / this.pageSize)
+    }
+  },
+  mounted() {
+    this.fetchItems()
+  },
+  methods: {
+    async fetchItems() {
+      this.loading = true
+      try {
+        const response = await this.$api.get('/items', {
+          params: { page: this.page, pageSize: this.pageSize }
+        })
+        this.items = response.data
+      } finally {
+        this.loading = false
+      }
+    }
+  }
+}
+</script>
+```
 
-Based on testing feedback, I refined the concept and developed interactive prototypes with more visual detail, focusing on:
+```vue
+<!-- After: Composition API -->
+<script setup>
+import { ref, computed, onMounted } from 'vue'
+import { useApi } from '@/composables/useApi'
 
-- Simplified data visualization using familiar metaphors
-- Immediate positive reinforcement for logged activities
-- Progressive disclosure of more complex environmental information
+const { get } = useApi()
 
-### User Testing (Round 2)
+const items = ref([])
+const loading = ref(false)
+const page = ref(1)
+const pageSize = ref(20)
 
-A second round of testing showed significant improvements in usability, but highlighted new challenges:
+const totalPages = computed(() => 
+  Math.ceil(items.value.length / pageSize.value)
+)
 
-- Users wanted to compare their impact with friends or community averages
-- Weekly summaries were more motivating than daily statistics
-- The onboarding process felt too lengthy
+const fetchItems = async () => {
+  loading.value = true
+  try {
+    const response = await get('/items', {
+      params: { page: page.value, pageSize: pageSize.value }
+    })
+    items.value = response.data
+  } finally {
+    loading.value = false
+  }
+}
 
-## Phase 4: Visual Design & Refinement
+onMounted(() => {
+  fetchItems()
+})
+</script>
+```
 
-With the core experience validated, I moved into high-fidelity visual design.
+The Composition API version is actually longer in this case, but the logic is more explicit and easier to follow. More importantly, if we needed pagination elsewhere, we could extract `usePagination()` and reuse it.
 
-### Visual Language
+## The Gotchas
 
-I developed a visual language that balanced approachability with credibility:
+We hit several issues that weren't obvious from the docs:
 
-- A nature-inspired color palette with clear functional color coding
-- Custom iconography that simplified complex concepts
-- Typography that prioritized readability across devices
-- Micro-interactions that provided satisfaction and reinforcement
+**Reactivity Loss**: We had code that destructured reactive objects and lost reactivity. This was a common mistake:
 
-### Design System
+```javascript
+// Wrong - loses reactivity
+const { name, email } = reactive(user)
 
-To ensure consistency and facilitate development, I created a comprehensive design system including:
+// Right - keeps reactivity
+const user = reactive({ name: '', email: '' })
+// Access as user.name, user.email
+```
 
-- Component library with documented states and behaviors
-- Responsive layout guidelines
-- Animation specifications
-- Accessibility standards
+**Vuex Integration**: Using Vuex with Composition API was awkward. We couldn't use `mapState` or `mapGetters` anymore. We ended up creating a `useStore()` wrapper that made it less painful, but it was still verbose. This is one reason we're planning to migrate to Pinia eventually.
 
-### Final Prototype
+**TypeScript Inference**: We weren't using TypeScript yet (that's another migration), but I noticed that Composition API would've given us much better type inference. That's a future win.
 
-The final prototype brought together all elements into a cohesive experience, which we tested with a broader user group before moving to development.
+**Testing Changes**: Our unit tests (Vitest) needed updates. We had to mock composables differently than we mocked mixins. Not hard, just different.
 
-## Phase 5: Implementation & Iteration
+## Results
 
-The design process doesn't end when development begins—it evolves.
+Six months later, we've migrated about 70% of the codebase. The remaining 30% are older, less-touched modules that we'll get to eventually. The impact has been significant:
 
-### Developer Collaboration
+- New features are faster to build. Composables make logic reuse trivial.
+- Onboarding new developers is easier. Composition API is more intuitive for people coming from React or modern frameworks.
+- Code reviews are cleaner. Less "where is this method defined?" confusion.
+- Bundle size actually went down slightly because we eliminated some mixin overhead.
 
-I worked closely with developers throughout implementation, participating in code reviews and adjusting designs to address technical constraints while preserving the core experience.
+The migration is still ongoing, but we're in a good place. Production has been stable throughout, which was the whole point. We proved you can modernize a large legacy codebase without a risky big-bang rewrite.
 
-### Analytics Implementation
+## Lessons Learned
 
-We integrated analytics to track our success metrics, setting up dashboards to monitor key interactions and user journeys.
+If you're considering a similar migration, here's my advice:
 
-### Post-Launch Iteration
+**Start with composables**: Extract shared logic into composables before you start migrating components. This gives you immediate value and makes the component migration easier.
 
-After launch, we established a regular cycle of analysis and iteration:
+**Migrate by feature, not by file**: Don't just pick random components. Migrate entire features or modules so you can see the benefits in context.
 
-- Weekly reviews of user feedback and behavior data
-- Bi-weekly design sprints to address emerging issues
-- Monthly feature planning based on usage patterns
+**Write migration guides**: Document your patterns and decisions. We created an internal wiki with examples of how to migrate common patterns. This made it easier for the whole team to contribute.
 
-## Results & Learnings
+**Use feature flags**: We used feature flags to gradually roll out migrated modules to production. If something broke, we could roll back instantly.
 
-Six months after launch, EcoTrack has exceeded our initial success metrics:
+**Don't rush**: We set a realistic timeline and stuck to it. Trying to rush would've introduced bugs and burned out the team.
 
-- 52% increase in daily active usage
-- 78% of users report better understanding of their environmental impact
-- Average user has adopted 3.4 new sustainable habits
-
-The most valuable lesson from this project was the importance of making abstract concepts tangible. By translating complex environmental data into personal, actionable insights, we created an experience that not only educated users but empowered them to make meaningful changes.
-
-## Conclusion
-
-Effective product design is never a linear journey—it's a continuous cycle of learning and refinement. By staying focused on user needs while maintaining a flexible approach to problem-solving, we can create products that not only meet business objectives but genuinely improve people's lives.
-
-I'd love to hear about your own design process and how you approach similar challenges. Feel free to reach out with questions or share your experiences in the comments below.
+The Vue 2.7 bridge bought us time to modernize without the risk of a Vue 3 upgrade. When we do eventually move to Vue 3, the migration will be much smoother because most of our code is already using Composition API. That's the real win.

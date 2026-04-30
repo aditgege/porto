@@ -1,0 +1,48 @@
+
+ADITIA DWI PRATOMO
+Senior Frontend Engineer | UI Architect
+Bandung, Indonesia | 089658552870 | aditgege@gmail.com | https://github.com/aditgege
+SUMMARY
+Creative and detail-oriented Frontend Engineer with 7+ years of experience specializing in the Vue.js & Nuxt.js ecosystem. Proven expertise in architecting large-scale Multi-tenant ERP systems and implementing Micro-frontend (Single-SPA) architectures. Adept at handling the full development lifecycle, from rapid UI prototyping (direct-to-code) to CI/CD and VPS server management. Passionate about high-performance web applications.
+
+TECHNICAL SKILLS
+Core: JavaScript (ES6+), HTML5, CSS3, Golang (Basic).
+Frameworks: Vue.js (2 & 3), Nuxt.js (2 & 3), React.js, Single-SPA. Laravel, Blade, JQuery
+State Management & Testing: Pinia, Vuex, Vitest, Playwright.
+Tools & Infra: Tailwind CSS, Vuetify, Strapi CMS, Docus Cms, REST API, Git, CI/CD, VP Management.
+Expertise: Legacy Code Migration, Multi-tenancy Architecture, Responsive Web Design.
+
+PROFESSIONAL EXPERIENCE
+PT SUNWELL SYSTEM TECHNOLOGIES | Bandung
+Software Engineer (March 2019 – Present)
+Lead Architect for SoraPOS: Developed a modern Point of Sale system using Nuxt 3 and Pinia, implementing Vitest & Playwright to ensure 99% reliability in business-critical transactions and Implement multi type multi tenant Point Of Sales.
+Legacy System Migration: Spearheaded the migration of a massive ERP system from Vue 2 to Vue 2.7 (Composition API bridge) and upgraded Vuetify 1 to 2, ensuring a smooth transition toward Vue 3.
+Multi-tenant ERP Development: Designed and maintained modular ERP systems for diverse industries (Retail, Automotive, Logistics), handling complex business logic and high-level customizations.
+Full-stack Ownership: Managed end-to-end frontend development, including UI design (direct-to-code), system architecture, and deploying multi-app environments on a single VPS.
+Sales Force Automation (SFA): Engineered a specialized tool for field sales using Nuxt and Golang, which was later integrated as a core module in the main ERP system.
+MOLADIN | Jakarta (Remote)
+Frontend Web Developer - Freelance (September 2021 – December 2021)
+Micro-frontend Orchestration: Successfully integrated various frontend domains into a unified dashboard using Single-SPA architecture.
+Domain Segregation: Solved complex challenges in separating business logic and boundaries between different frontend modules to ensure scalability.
+Mobile-First Strategy: Developed and optimized standalone mobile-first product modules that integrated seamlessly into the core CRM ecosystem.
+NGONDANG.ID | Bandung
+Frontend Web Developer (March 2022 – Present)
+Developed an automated wedding invitation platform using Nuxt.js and Strapi CMS.
+Integrated REST APIs for dynamic content delivery and implemented SEO best practices for user-generated invitation pages.
+MUSLIMEDU.CO | Bandung
+Frontend Web Developer (March 2020 – August 2020)
+Built e-learning and event platforms with Nuxt.js and Vuex, focusing on seamless user interactions and responsive layouts using Tailwind CSS.
+Built Ebook and Book store integration with strapi.
+IWEARZULE.COM | Bandung
+Frontend Web Developer (March 2018 – August 2019)
+Developed a specialized e-commerce platform for kids' clothing using Laravel Blade and Bootstrap, improving mobile navigation and user retention.
+
+EDUCATION
+STMIK AMIK BANDUNG (2019 – 2024) – Bachelor’s Degree in Information Technology
+SMK NEGERI 4 BANDUNG (2015 – 2018) – Software Engineering
+
+PROJECTS & INTERESTS
+Kitchen Monitoring System: Architected a multi-tenant monitoring dashboard for foundation-based kitchen management.
+
+
+

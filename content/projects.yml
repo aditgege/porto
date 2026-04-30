@@ -1,8 +1,8 @@
-title: "Designing Interfaces, Building Experiences."
+title: "Building Systems That Scale."
 description: |
-  I’ve worked on projects that blend function and personality — from crafting café POS systems that feel effortless to playful zines about cacti that refuse to die.
-  My focus is on creating intuitive, thoughtful digital experiences where design feels natural and code stays clean.
-  Here are a few things I’ve built and learned along the way.
+  From multi-tenant ERP platforms serving diverse industries to POS systems handling thousands of daily transactions —
+  I focus on architecting frontend applications that are modular, maintainable, and built for real-world complexity.
+  Here's a selection of what I've built over the past 7+ years.
 links:
   - label: "Let's talk"
     color: "neutral"

@@ -1,48 +1,34 @@
-title: Talks & Workshops
-description: Explore talks and workshops I've given on UX design, front-end development, and building better digital products.
+title: Talks & Knowledge Sharing
+description: Technical talks and knowledge sharing sessions on frontend architecture, Vue.js ecosystem, and building scalable web applications.
 links:
   - label: Invite me to speak
     size: md
 events:
-  - category: Conference
-    title: "Bridging the Gap: Design Systems for Designer-Developer Collaboration"
-    date: "2024-10-26"
-    location: "VueConf US, Miami, FL"
-    url: "#"
-  - category: Conference
-    title: "Intuitive Interfaces: Applying UX Principles in Nuxt.js Applications"
-    date: "2024-06-15"
-    location: "Nuxt Nation, Online"
-    url: "#"
-  - category: Conference
-    title: "Accessibility First: Building Inclusive Web Apps"
-    date: "2023-11-08"
-    location: "Boston Web Performance Meetup, Boston, MA"
   - category: Live talk
-    title: "Mastering Component Design in Figma & Vue"
-    date: "2024-08-20"
-    location: "Design & Dev Boston Meetup, Boston, MA"
-    url: "#"
+    title: "Migrating Large-Scale Vue 2 Apps to Composition API Without Downtime"
+    date: "2024-08-15"
+    location: "Sunwell Internal Tech Talk, Bandung"
   - category: Live talk
-    title: "From Wireframe to Web: A Practical Front-End Workflow"
-    date: "2024-03-05"
-    location: "Internal Workshop @ PreviousCompany Inc."
+    title: "Multi-Tenant Frontend Architecture: Patterns and Pitfalls"
+    date: "2024-03-20"
+    location: "Bandung.js Meetup, Bandung"
   - category: Live talk
-    title: "The Power of User Research in Product Development"
-    date: "2023-09-12"
-    location: "Boston University Guest Lecture, Boston, MA"
+    title: "Building a POS System with Nuxt 3: From Zero to Production"
+    date: "2023-11-10"
+    location: "Vue.js Indonesia Community, Online"
+  - category: Conference
+    title: "Micro-Frontends with Single-SPA: Real-World Integration Patterns"
+    date: "2023-06-22"
+    location: "Frontend Developer Conference, Jakarta"
+  - category: Live talk
+    title: "Direct-to-Code UI Prototyping: Why I Stopped Using Design Tools"
+    date: "2023-02-18"
+    location: "Sunwell Internal Workshop, Bandung"
   - category: Podcast
-    title: "Designing for Developers: A UX Perspective"
-    date: "2024-07-18"
-    location: "Syntax.fm (Guest)"
-    url: "#"
+    title: "The Reality of Multi-Tenant ERP Development in Indonesia"
+    date: "2024-05-12"
+    location: "Tech in Asia Podcast (Guest)"
   - category: Podcast
-    title: "The Future of Front-End Frameworks & Design Tooling"
-    date: "2024-01-30"
-    location: "Design Details Podcast (Guest)"
-    url: "#"
-  - category: Podcast
-    title: "Building a Career in UX/UI & Development"
-    date: "2023-05-22"
-    location: "TechForward Boston Podcast"
-    url: "#"
+    title: "Vue.js Ecosystem in Southeast Asia: Growth and Challenges"
+    date: "2023-09-08"
+    location: "Frontend Indonesia Podcast"

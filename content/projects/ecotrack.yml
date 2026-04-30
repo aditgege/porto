@@ -1,6 +1,6 @@
-title: EcoTrack Sustainability App
-description: Created a mobile-first application to help users track and reduce their environmental impact. Translated complex sustainability metrics into an accessible and motivating user interface.
-image: https://images.unsplash.com/photo-1613858749733-3a3e456e3d9e?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+title: Multi-Tenant ERP System
+description: Designed and maintained modular ERP systems serving diverse industries including retail, automotive, and logistics. Led the legacy migration from Vue 2 to Vue 2.7 Composition API bridge and upgraded Vuetify 1 to 2, ensuring zero-downtime transition toward Vue 3.
+image: https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80
 url: "#"
-tags: ["UX Research", "UI Design", "Mobile App"]
-date: "2023"
+tags: ["Vue.js", "Vuetify", "Composition API", "Legacy Migration", "ERP"]
+date: "2019"
