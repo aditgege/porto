@@ -18,18 +18,8 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-11-01',
 
-  ogImage: {
-    enabled: true,
-    runtimeCacheStorage: false,
-    renderer: 'satori',
-    compatibility: {
-      runtime: {
-        resvg: 'wasm'
-      }
-    }
-  },
-
   nitro: {
+    preset: 'cloudflare-pages',
     prerender: {
       routes: [
         '/'
@@ -46,6 +36,17 @@ export default defineNuxtConfig({
       stylistic: {
         commaDangle: 'never',
         braceStyle: '1tbs'
+      }
+    }
+  },
+
+  ogImage: {
+    enabled: true,
+    runtimeCacheStorage: false,
+    renderer: 'satori',
+    compatibility: {
+      runtime: {
+        resvg: 'wasm'
       }
     }
   }

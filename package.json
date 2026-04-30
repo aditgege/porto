@@ -20,12 +20,12 @@
     "@vueuse/nuxt": "^13.9.0",
     "better-sqlite3": "^12.4.1",
     "motion-v": "^1.7.3",
-    "nuxt": "^4.2.0",
-    "nuxt-og-image": "^5.1.12"
+    "nuxt": "^4.2.0"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.9.0",
     "eslint": "^9.38.0",
+    "nuxt-og-image": "^5.1.13",
     "typescript": "^5.9.3",
     "vue-tsc": "^3.1.2"
   },
