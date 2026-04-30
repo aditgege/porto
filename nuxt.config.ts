@@ -18,13 +18,23 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-11-01',
 
+  ogImage: {
+    enabled: true,
+    runtimeCacheStorage: false,
+    renderer: 'satori'
+  },
+
   nitro: {
     prerender: {
       routes: [
         '/'
       ],
       crawlLinks: true
-    }
+    },
+    externals: {
+      external: [/\.node$/]
+    },
+    inline: ['@resvg/resvg-js', '@resvg/resvg-wasm']
   },
 
   eslint: {
