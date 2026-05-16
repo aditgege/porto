@@ -1,0 +1,17 @@
+title: Gallery
+description: A collection of my favorite photos
+images:
+  - src: /hero/random-1.avif
+    alt: Random 1
+  - src: /hero/random-2.avif
+    alt: Random 2
+  - src: /hero/random-3.avif
+    alt: Random 3
+  - src: /hero/random-4.avif
+    alt: Random 4
+  - src: /hero/random-5.avif
+    alt: Random 5
+  - src: /hero/random-6.avif
+    alt: Random 6
+  - src: /me/gelap.jpg
+    alt: Me

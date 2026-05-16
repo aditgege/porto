@@ -19,6 +19,10 @@ export const navLinks: NavigationMenuItem[] = [{
 //   to: '/speaking'
 // },
 {
+  label: 'Gallery',
+  icon: 'i-lucide-image',
+  to: '/gallery'
+}, {
   label: 'About',
   icon: 'i-lucide-user',
   to: '/about'
