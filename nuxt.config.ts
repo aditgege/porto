@@ -6,8 +6,8 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/content',
     '@vueuse/nuxt',
-    'nuxt-og-image',
-    'motion-v/nuxt'
+    'motion-v/nuxt',
+    'nuxt-og-image'
   ],
 
   devtools: {
@@ -27,7 +27,7 @@ export default defineNuxtConfig({
       crawlLinks: true
     },
     externals: {
-      external: [/\.node$/]
+      external: [/\.node$/, /^better-sqlite3$/]
     }
   },
 
@@ -42,8 +42,7 @@ export default defineNuxtConfig({
 
   ogImage: {
     enabled: true,
-    runtimeCacheStorage: false,
-    renderer: 'satori',
+    runtimeCacheStorage: true,
     compatibility: {
       runtime: {
         resvg: 'wasm'

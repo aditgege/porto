@@ -1,5 +1,5 @@
-title: Talks & Knowledge Sharing
-description: Technical talks and knowledge sharing sessions on frontend architecture, Vue.js ecosystem, and building scalable web applications.
+title: Talks & sessions
+description: Sharing what I've learned shipping production Vue and Nuxt apps — multi-tenant ERPs, micro-frontends, and the migrations nobody volunteers for.
 links:
   - label: Invite me to speak
     size: md

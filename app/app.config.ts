@@ -5,7 +5,7 @@ export default defineAppConfig({
       light: '/me/gelap.jpg',
       alt: 'My profile picture'
     },
-    meetingLink: 'emailto:aditgege@gmail.com',
+    meetingLink: 'mailto:aditgege@gmail.com',
     email: 'aditgege@gmail.com',
     available: true
   },
@@ -23,7 +23,7 @@ export default defineAppConfig({
     }
   },
   footer: {
-    credits: `Built with Nuxt UI • © ${new Date().getFullYear()}`,
+    credits: `Aditia Dwi Pratomo · Built in Bandung · © ${new Date().getFullYear()}`,
     colorMode: false,
     links: [
       {

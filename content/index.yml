@@ -1,9 +1,9 @@
 seo:
-  title: "Aditia Dwi Pratomo – Senior Frontend Engineer & UI Architect"
-  description: "Senior Frontend Engineer with 7+ years specializing in Vue.js, Nuxt.js, and large-scale multi-tenant ERP systems. Based in Bandung, Indonesia."
+  title: "Aditia Dwi Pratomo — Frontend Engineer"
+  description: "Frontend engineer in Bandung. I build multi-tenant ERPs, POS systems, and micro-frontend dashboards in the Vue and Nuxt ecosystem."
 
-title: "Hey, I'm Aditia — Senior Frontend Engineer"
-description: "I architect large-scale Vue.js applications, build multi-tenant ERP systems, and migrate legacy codebases without breaking production. 7+ years turning complex business logic into clean, maintainable frontends."
+title: "Hey, I'm Aditia."
+description: "I build large Vue and Nuxt apps for a living — multi-tenant ERPs, POS systems, the unglamorous migrations no one volunteers for. Based in Bandung, shipping for 7+ years."
 
 hero:
   links:
@@ -27,10 +27,10 @@ hero:
 about:
   title: About Me
   description: |
-    Frontend engineer based in Bandung, Indonesia with 7+ years of hands-on experience in the Vue.js and Nuxt.js ecosystem.
-    I specialize in architecting multi-tenant ERP systems, building POS applications, and implementing micro-frontend architectures with Single-SPA.
-    My approach is practical — I go direct-to-code for UI prototyping, handle CI/CD pipelines, and manage VPS deployments.
-    I care about writing code that's maintainable, performant, and doesn't make the next developer curse my name.
+    Frontend engineer based in Bandung, Indonesia. Seven-plus years deep in Vue and Nuxt — mostly
+    architecting multi-tenant ERPs, POS apps, and micro-frontends with Single-SPA. I prefer
+    prototyping straight in the browser over weeks in Figma. I run my own CI/CD, deploy to my own
+    VPS, and write code the next person doesn't curse me for.
 
 experience:
   title: Work Experience
@@ -77,19 +77,19 @@ testimonials:
       name: "Engineering Lead"
       description: "Sunwell System Technologies"
       avatar:
-        src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=40&h=40&q=80"
+        src: "/me/gelap.jpg"
         alt: "Engineering Lead"
   - quote: "Working with Aditia on the Single-SPA integration was seamless. He solved complex domain separation challenges between our frontend modules and delivered a unified dashboard that just worked."
     author:
       name: "Tech Lead"
       description: "Moladin"
       avatar:
-        src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&facepad=2&w=40&h=40&q=80"
+        src: "/me/gelap.jpg"
         alt: "Tech Lead"
 
 blog:
-  title: "Writing & Notes"
-  description: "Technical articles on frontend architecture, Vue.js patterns, and lessons from building production systems."
+  title: "Notes from the build"
+  description: "What I've learned shipping production Vue apps — patterns, migrations, and a few opinions you can disagree with."
 
 faq:
   title: "Frequently Asked Questions"

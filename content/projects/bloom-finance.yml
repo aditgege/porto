@@ -1,5 +1,7 @@
-title: SoraPOS — Multi-Tenant Point of Sale
-description: Lead architect for a modern POS system built with Nuxt 3 and Pinia. Implemented comprehensive testing with Vitest & Playwright achieving 99% reliability in business-critical transactions. Supports multiple tenant types and business models across retail industries.
+title: SoraPOS
+client: Sunwell System Technologies
+role: Lead Frontend Architect
+description: Retail clients kept losing transactions when their old POS crashed at peak hours. Built a multi-tenant POS that handles thousands of daily transactions across dozens of stores, with Vitest and Playwright wiring up flow tests so payment paths never silently break.
 image: https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80
 url: "#"
 tags: ["Nuxt 3", "Pinia", "Vitest", "Playwright", "Multi-Tenant"]

@@ -18,10 +18,15 @@ useHead({
 })
 
 useSeoMeta({
-  titleTemplate: '%s - Aditia Dwi Pratomo',
-  ogImage: 'https://ui.nuxt.com/assets/templates/nuxt/portfolio-light.png',
-  twitterImage: 'https://ui.nuxt.com/assets/templates/nuxt/portfolio-light.png',
+  titleTemplate: '%s — Aditia Dwi Pratomo',
   twitterCard: 'summary_large_image'
+})
+
+defineOgImageComponent('NuxtSeo', {
+  title: 'Aditia Dwi Pratomo',
+  description: 'Frontend engineer shipping multi-tenant ERP systems and POS apps from Bandung.',
+  theme: '#84cc16',
+  siteLogo: '/me/gelap.jpg'
 })
 
 const [{ data: navigation }, { data: files }] = await Promise.all([

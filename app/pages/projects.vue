@@ -11,7 +11,7 @@ if (!page.value) {
 }
 
 const { data: projects } = await useAsyncData('projects', () => {
-  return queryCollection('projects').all()
+  return queryCollection('projects').limit(20).all()
 })
 
 const { global } = useAppConfig()
@@ -79,9 +79,17 @@ useSeoMeta({
           }"
         >
           <template #leading>
-            <span class="text-sm text-muted">
-              {{ new Date(project.date).getFullYear() }}
-            </span>
+            <div class="flex flex-col gap-1 text-sm">
+              <span
+                v-if="project.client"
+                class="font-medium text-primary"
+              >
+                {{ project.client }}
+              </span>
+              <span class="text-muted">
+                {{ new Date(project.date).getFullYear() }}<template v-if="project.role"> · {{ project.role }}</template>
+              </span>
+            </div>
           </template>
           <template #footer>
             <ULink

@@ -78,6 +78,8 @@ export default defineContentConfig({
       source: 'projects/*.yml',
       schema: z.object({
         title: z.string().nonempty(),
+        client: z.string().optional(),
+        role: z.string().optional(),
         description: z.string().nonempty(),
         image: z.string().nonempty().editor({ input: 'media' }),
         url: z.string().nonempty(),

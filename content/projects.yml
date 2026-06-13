@@ -1,8 +1,8 @@
-title: "Building Systems That Scale."
+title: "Things I've shipped."
 description: |
-  From multi-tenant ERP platforms serving diverse industries to POS systems handling thousands of daily transactions —
-  I focus on architecting frontend applications that are modular, maintainable, and built for real-world complexity.
-  Here's a selection of what I've built over the past 7+ years.
+  A growing list of projects, mostly from inside the Vue and Nuxt ecosystem.
+  Multi-tenant ERPs, POS systems, micro-frontend dashboards, the occasional weekend experiment.
+  Each one started as a real business problem someone needed to fix.
 links:
   - label: "Let's talk"
     color: "neutral"

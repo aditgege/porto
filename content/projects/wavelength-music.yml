@@ -1,5 +1,7 @@
-title: Ngondang.id — Wedding Invitation Platform
-description: Built an automated wedding invitation platform using Nuxt.js and Strapi CMS. Integrated REST APIs for dynamic content delivery and implemented SEO best practices for user-generated invitation pages, enabling couples to create personalized digital invitations at scale.
+title: Ngondang.id
+client: Self / Ngondang.id
+role: Frontend Developer
+description: Building a digital wedding invitation in 2022 still meant wrangling static templates. Built a SaaS that generates personalized invitations on the fly, where every couple gets their own SEO-friendly public page indexed by Google.
 image: https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80
 url: "https://ngondang.id"
 tags: ["Nuxt.js", "Strapi CMS", "REST API", "SEO", "SaaS"]

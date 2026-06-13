@@ -1,5 +1,7 @@
-title: Moladin — Micro-Frontend Dashboard
-description: Integrated multiple frontend domains into a unified CRM dashboard using Single-SPA architecture. Solved complex domain separation challenges between business modules, ensuring scalability and clean boundaries. Developed mobile-first product modules that integrated seamlessly into the core ecosystem.
+title: Unified CRM Dashboard
+client: Moladin
+role: Frontend Developer (Freelance)
+description: Several product teams wanted to ship independently, but their users needed one CRM. Wired multiple frontend domains together with Single-SPA into a unified dashboard, with clean module boundaries that survived team reorgs and mobile-first product launches.
 image: https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80
 url: "#"
 tags: ["Single-SPA", "Micro-Frontend", "Vue.js", "Mobile-First", "CRM"]

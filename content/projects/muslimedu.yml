@@ -1,5 +1,7 @@
-title: Muslimedu.co — E-Learning Platform
-description: Built e-learning and event platforms with Nuxt.js and Vuex, featuring seamless user interactions and responsive layouts with Tailwind CSS. Integrated an ebook and book store with Strapi CMS for dynamic content management and delivery.
+title: Three Products, One Platform
+client: Muslimedu.co
+role: Frontend Developer
+description: An Islamic learning platform that also needed to sell ebooks and run events — three products living in one site. Built it on Nuxt and Strapi so courses, store inventory, and event pages all share a single editable source of truth.
 image: https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80
 url: "#"
 tags: ["Nuxt.js", "Vuex", "Tailwind CSS", "Strapi CMS", "E-Learning"]
