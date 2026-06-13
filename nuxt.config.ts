@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     'motion-v/nuxt',
-    'nuxt-og-image'
+    'nuxt-og-image',
+    'nuxt-studio'
   ],
 
   devtools: {
@@ -47,6 +48,15 @@ export default defineNuxtConfig({
       runtime: {
         resvg: 'wasm'
       }
+    }
+  },
+
+  studio: {
+    repository: {
+      provider: 'github',
+      owner: 'aditgege',
+      repo: 'porto',
+      branch: 'main'
     }
   }
 })
