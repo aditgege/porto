@@ -25,7 +25,8 @@ export default defineNuxtConfig({
       routes: [
         '/'
       ],
-      crawlLinks: true
+      crawlLinks: true,
+      autoSubfolderIndex: false
     },
     externals: {
       external: [/\.node$/, /^better-sqlite3$/]
