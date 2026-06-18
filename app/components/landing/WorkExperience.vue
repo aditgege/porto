@@ -34,6 +34,7 @@ defineProps<{
             class="flex items-center gap-1"
             :to="experience.company.url"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <span class="text-sm">
               {{ experience.position }}

@@ -109,6 +109,7 @@ function formatDate(dateString: string): string {
             <UButton
               v-if="event.url"
               target="_blank"
+              rel="noopener noreferrer"
               :label="event.category === 'Podcast' ? 'Listen' : 'Watch'"
               variant="link"
               class="p-0 pt-2 gap-0"
